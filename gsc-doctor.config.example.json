@@ -1,0 +1,12 @@
+{
+  "brandTerms": ["example outdoors"],
+  "thresholds": {
+    "striking": { "minPosition": 4, "maxPosition": 20, "minImpressions": 100, "targetPosition": 3 },
+    "lowCtr": { "maxPosition": 10, "minImpressions": 300, "maxCtrRatio": 0.6 },
+    "losers": { "minClickLoss": 10, "minClickLossPct": 0.2, "positionDrop": 1.5, "demandDropPct": 0.25, "ctrDropPct": 0.25 },
+    "cannibalization": { "minImpressions": 100, "minPageShare": 0.1, "includeBranded": false },
+    "ctr": { "model": "site", "minImpressionsForCurve": 50, "minQueriesPerPosition": 5 }
+  },
+  "maxRowsPerSection": 25,
+  "topActions": 10
+}

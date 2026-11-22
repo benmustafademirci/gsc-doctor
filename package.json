@@ -1,0 +1,53 @@
+{
+  "name": "gsc-doctor",
+  "version": "0.1.0",
+  "description": "One command turns your Google Search Console data into a prioritized SEO to-do list and a shareable, single-file HTML report. Optional Gemini summaries.",
+  "type": "module",
+  "bin": {
+    "gsc-doctor": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "demo": "npm run build && node dist/cli.js --demo",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "seo",
+    "google-search-console",
+    "search-console",
+    "gsc",
+    "cli",
+    "report",
+    "ctr",
+    "keyword-cannibalization",
+    "striking-distance",
+    "gemini"
+  ],
+  "author": "Mustafa Demirci",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benmustafademirci/gsc-doctor.git"
+  },
+  "homepage": "https://github.com/benmustafademirci/gsc-doctor#readme",
+  "bugs": {
+    "url": "https://github.com/benmustafademirci/gsc-doctor/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.12"
+  }
+}
